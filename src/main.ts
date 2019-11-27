@@ -1,5 +1,6 @@
 import { app, BrowserWindow, screen } from 'electron';
 import { resolve } from 'path';
+console.log(process.env.NODE_ENV);
 
 // window.gcをonにする
 app.commandLine.appendSwitch('js-flags', '--expose-gc');
@@ -19,21 +20,23 @@ app.on('ready',function(){
     height: height,
     show: true,
     frame: false,
-    transparent: true,
+    // transparent: true,
     resizable: false,
   });
-  switch (process.env.NODE_ENV) {
-    case 'development':
-      process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true';
-      mainWindow.loadURL('http://localhost:4030');
-      break;
-    case 'production':
-    default: 
-      mainWindow.loadFile(resolve('src/index.html'));
-  }
 
+  switch(process.env.NODE_ENV) {
+    case 'development':
+      mainWindow.loadURL('http://localhost:8181');
+      mainWindow.webContents.openDevTools();
+      break;
+    case 'production': 
+    default:
+      mainWindow.loadFile(resolve('src/index.html'));
+      break;
+  }
+  
   mainWindow.setMenu(null);
-  mainWindow.setIgnoreMouseEvents(true);
+  // mainWindow.setIgnoreMouseEvents(true);
   mainWindow.setAlwaysOnTop(true);
 
   // mainWindow.webContents.openDevTools();
