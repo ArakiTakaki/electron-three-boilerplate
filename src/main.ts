@@ -20,14 +20,14 @@ app.on('ready',function(){
     height: height,
     show: true,
     frame: false,
-    // transparent: true,
+    transparent: true,
     resizable: false,
   });
+  // mainWindow.setRadii(0, 0, 0, 0);
 
   switch(process.env.NODE_ENV) {
     case 'development':
       mainWindow.loadURL('http://localhost:8181');
-      mainWindow.webContents.openDevTools();
       break;
     case 'production': 
     default:
@@ -36,11 +36,10 @@ app.on('ready',function(){
   }
   
   mainWindow.setMenu(null);
-  // mainWindow.setIgnoreMouseEvents(true);
+  mainWindow.setIgnoreMouseEvents(true);
   mainWindow.setAlwaysOnTop(true);
 
-  // mainWindow.webContents.openDevTools();
-  mainWindow.on("closed",function(){
+  mainWindow.on("closed" ,function(){
   	app.quit();
   });
 });

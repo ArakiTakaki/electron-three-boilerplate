@@ -1,1 +1,1 @@
-console.log('hello');
+import './renderer/entry';

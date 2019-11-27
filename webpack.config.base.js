@@ -57,19 +57,36 @@ const renderer = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.(ts|tsx)$/,
         use: [
-          {
-            loader: 'ts-loader',
-          }
-        ]
+          { loader: 'ts-loader', }
+        ],
+      },
+      {
+        test: /\.(jpg|png|gif)$/,
+        use: [ 
+          { loader: 'url-loader' } 
+        ],
+      },
+      {
+        test: /\.(glsl|vs|fs)$/,
+        loader: 'shader-loader',
+        options: {
+          glsl: { chunkPath: path.resolve('/glsl/chunks') }
+        }
+      },
+      {
+        test: /\.obj$/,
+        loader: 'webpack-obj-loader'
       }
     ]
   },
   resolve: {
     extensions: [
       '.ts',
+      '.tsx',
       '.js',
+      '.jsx',
     ],
   },
   plugins: [
