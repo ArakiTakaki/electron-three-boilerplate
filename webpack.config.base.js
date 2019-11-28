@@ -63,21 +63,15 @@ const renderer = {
         ],
       },
       {
-        test: /\.(jpg|png|gif)$/,
+        test: /\.(fpc|mps|mpb|cxc|cxs|cxb|tga|glsl|vs|fs|jpg|png|gif|obj|mtl)$/,
         use: [ 
-          { loader: 'url-loader' } 
+          { 
+            loader: 'file-loader',
+            options: {
+              name: "[name].[ext]",
+            }
+          } 
         ],
-      },
-      {
-        test: /\.(glsl|vs|fs)$/,
-        loader: 'shader-loader',
-        options: {
-          glsl: { chunkPath: path.resolve('/glsl/chunks') }
-        }
-      },
-      {
-        test: /\.obj$/,
-        loader: 'webpack-obj-loader'
       }
     ]
   },

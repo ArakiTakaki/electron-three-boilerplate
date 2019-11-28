@@ -276,13 +276,6 @@
   resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.4.tgz#b4ffc7dc97b498c969b360a41eee247f82616370"
   integrity sha512-78AdXtlhpCHT0K3EytMpn4JNxaf5tbqbLcbIRoQIHzpTIyjpxLQKRoxU55ujBXAtg3Nl2h/XWvfDa9dsMOd0pQ==
 
-"@types/three@^0.103.2":
-  version "0.103.2"
-  resolved "https://registry.yarnpkg.com/@types/three/-/three-0.103.2.tgz#f7d49130001c551941a0ded757def810579aafc4"
-  integrity sha512-zhtf0Qs5wLJpIn1+VWCpzSgpKayj/GSWZ6woiuz09FW59KEDeLpnBkYz6lbblVpRmGdlnG8nd0unaASshOvcXw==
-  dependencies:
-    three "*"
-
 "@types/tween.js@^17.2.0":
   version "17.2.0"
   resolved "https://registry.yarnpkg.com/@types/tween.js/-/tween.js-17.2.0.tgz#25f98311daecb165ab91ee2cd7f17a9b1e6cc30c"
@@ -2755,6 +2748,14 @@ import-local@2.0.0, import-local@^2.0.0:
     pkg-dir "^3.0.0"
     resolve-cwd "^2.0.0"
 
+imports-loader@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/imports-loader/-/imports-loader-0.8.0.tgz#030ea51b8ca05977c40a3abfd9b4088fe0be9a69"
+  integrity sha512-kXWL7Scp8KQ4552ZcdVTeaQCZSLW+e6nJfp3cwUMB673T7Hr98Xjx5JK+ql7ADlJUvj1JS5O01RLbKoutN5QDQ==
+  dependencies:
+    loader-utils "^1.0.2"
+    source-map "^0.6.1"
+
 imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
@@ -3589,6 +3590,11 @@ ms@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
+
+mtl-loader@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/mtl-loader/-/mtl-loader-0.2.0.tgz#aa9640b570443b51519b38a478bd65698f6b14c8"
+  integrity sha512-cHJGSDhl3qLhzMtod3Dg363suEwLznqKyYALYPAcBhv6zv434KPMEku9GfLw2lw96DEfVhiq33OCqeZ4xlILqA==
 
 multicast-dns-service-types@^1.1.0:
   version "1.1.0"
@@ -5247,10 +5253,10 @@ terser@^4.1.2:
     source-map "~0.6.1"
     source-map-support "~0.5.12"
 
-three@*:
-  version "0.110.0"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.110.0.tgz#8719591de1336269113ee79f4268ba247b2324f8"
-  integrity sha512-wlurH8XBO9Sd5VIw8nBa+taLR20kqaI4e9FiuMh6tqK8eOS2q2R+ZoUyufbyDTVTHhs8GiTbv0r2CMLkwerFJg==
+three-obj-loader@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/three-obj-loader/-/three-obj-loader-1.1.3.tgz#4d540a256fcf2a59a6c6e0cd51a623efd76fd87d"
+  integrity sha512-usuOOTAqeM7J7dyae/I9ltFnfy1g47Hsr3byTvBTeH9LYz5vb2i8rLd2Hi1HEr0MbB5H4p9YrqFaDGcijXEVNw==
 
 three@^0.109.0:
   version "0.109.0"
@@ -5395,6 +5401,11 @@ type-is@~1.6.17, type-is@~1.6.18:
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.24"
+
+typed-emitter@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/typed-emitter/-/typed-emitter-0.2.0.tgz#ede9a20a3aa78cb853c2866ddad968a3925830e1"
+  integrity sha512-bq2aUggcZW+YM2wUHVLzGJ2Zvxr63oM6CJJXwioy3xIWyRWr7cmph4iSEZPWX67+qpMKETZQc0Bp55FwcNCmXg==
 
 typedarray@^0.0.6:
   version "0.0.6"
