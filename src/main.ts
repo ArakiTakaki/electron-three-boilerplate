@@ -23,7 +23,6 @@ app.on('ready',function(){
     transparent: true,
     resizable: false,
   });
-  // mainWindow.setRadii(0, 0, 0, 0);
 
   switch(process.env.NODE_ENV) {
     case 'development':
@@ -31,10 +30,9 @@ app.on('ready',function(){
       break;
     case 'production': 
     default:
-      mainWindow.loadFile(resolve('src/index.html'));
+      mainWindow.loadFile(resolve(__dirname, '../out/index.html'));
       break;
   }
-  
   mainWindow.setMenu(null);
   mainWindow.setIgnoreMouseEvents(true);
   mainWindow.setAlwaysOnTop(true);

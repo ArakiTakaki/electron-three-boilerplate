@@ -62,6 +62,9 @@
       "target": "zip"
     },
     "files": [
+      "./out/index.html",
+      "./out/main.js",
+      "./out/renderer.js",
       "./out/"
     ]
   }
