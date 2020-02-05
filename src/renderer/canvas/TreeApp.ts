@@ -11,7 +11,6 @@ export default class ThreeApp  {
   private cancelToken: number = 0;
 
   constructor(elCanvas: HTMLCanvasElement) {
-    // super();
     this.$canvaas = elCanvas;
     const { clientWidth: width , clientHeight: height } = this.$canvaas;
     this.renderer = new THREE.WebGLRenderer({canvas: elCanvas, alpha: true});
@@ -25,14 +24,8 @@ export default class ThreeApp  {
     console.log(width);
     console.log(height);
     this.scene = this.sceneChanger();
-    // emitter
-    // this.emit('start', this.hoge);
-    // this.emit('stop', this.hoge);
-    // this.emit('update', this); // 必要ないかも intercept
-    // this.emit('clickMesh', this.hoge); // laycast
   }
 
-  // あとでDIっぽくしたい
   sceneChanger() {
     return MainScene.scene;
   }
