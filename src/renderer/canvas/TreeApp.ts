@@ -25,7 +25,7 @@ export default class ThreeApp  {
     console.log(width);
     console.log(height);
     this.scene = this.sceneChanger();
-    // emitter 
+    // emitter
     // this.emit('start', this.hoge);
     // this.emit('stop', this.hoge);
     // this.emit('update', this); // 必要ないかも intercept

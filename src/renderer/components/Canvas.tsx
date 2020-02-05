@@ -11,13 +11,16 @@ const Canvas = () => {
     if (canvasEl == null) return;
     const canvasApp = new CanvasApp(canvasEl);
     canvasApp.render();
+    return () => {
+      canvasApp.stop();
+    }
   }, [canvasRef]);
 
   return (
-    <canvas 
-      ref={canvasRef} 
-      width={window.innerWidth} 
-      height={window.innerHeight} 
+    <canvas
+      ref={canvasRef}
+      width={window.innerWidth}
+      height={window.innerHeight}
     />
   )
 };
